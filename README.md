@@ -37,6 +37,8 @@ let blockchain = new Blockchain();
 
 ### Step 3: If PREREQUISITES are met.
 
+- close the terminal opened in step 2
+
 ```
 $ npm install hapi --save
 
