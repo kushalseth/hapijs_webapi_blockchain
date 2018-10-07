@@ -71,14 +71,18 @@ server.route({
     method: 'POST',
     path: '/block',
     handler: function (request, h) {
-        const payload = request.payload;
-        console.log("Payload is:", payload);
+        var payload = typeof payload == "string" ?  decodeURIComponent(request.payload) : request.payload;
+        var payload_obj = typeof payload == "string" ? JSON.parse(payload) : payload;
+        console.log("Payload is:", typeof payload_obj);
 
-        if(payload && typeof(payload.body) !== "undefined")
+        if(payload_obj && typeof(payload_obj.body) !== "undefined" 
+            && payload_obj.body && payload_obj.body.trim().length > 0)
         {
+            console.log(typeof(payload_obj.body));
             return new Promise(function(resolve, reject) {
-                console.log()
-                blockchain.addBlock(new Block(payload.body))
+                //var payload_obj = JSON.parse(payload.body);
+                console.log(payload_obj.body);
+                blockchain.addBlock(new Block(payload_obj.body.trim()))
                 .then(function(data) {
                     console.log("IT's a Success");
                     return resolve(JSON.parse(data));
@@ -91,7 +95,7 @@ server.route({
         }
         else {
             var err = { 
-                error: "Please add body as key in method payload"
+                error: "Please add proper value of body as key in method payload"
             }; 
             console.log(err);
             return(err);

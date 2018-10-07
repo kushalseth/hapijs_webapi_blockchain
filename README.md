@@ -23,7 +23,7 @@
 
 - Fork the project [Private Blockchain project] or Copy and paste the "project-2" folder of private Blockchain project at your directory.
 
-- Try running the Private Blockchain project. It should run. [ For details about running private blockchain project, please refer the readme.md of that project ].  Go to console - 
+- Try running the Private Blockchain project. It should run. [ For details about running private blockchain project, please refer the private blockchain project ].  Go to console - 
 ```
 $ node
 ```
@@ -69,6 +69,9 @@ $ npm start
 - FORM DATA: 
 		KEY  : body
 	 	VALUE: {body of the blockchain}
+- RAW:
+		{"body":"test block body"}
+
 
 
 # TESTING THE APPLICATION: 
