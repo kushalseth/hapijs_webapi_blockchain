@@ -19,7 +19,7 @@
 
 ### Step 2: PREREQUISITE: Configure Private Blockchain project here:
 
-- Go to Private Blockchain project [Link](https://github.com/KushalGH/webservices_nodeJS)
+- Go to Private Blockchain project [Link](https://github.com/KushalGH/private_blockchain_leveldb)
 
 - Fork the project [Private Blockchain project] or Copy and paste the "project-2" folder of private Blockchain project at your directory.
 
