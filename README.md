@@ -6,7 +6,7 @@
 - For this project, we’ll build a RESTful API using a Node.js framework that will interface with the [private blockchain!](https://github.com/KushalGH/private_blockchain_leveldb). 
 
 
-## STEP 1:  SELECT Node.JS framework
+### STEP 1:  SELECT Node.JS framework
 - Selected HapiJs.
 
 > Reason I have selected HapiJS is:
@@ -17,7 +17,7 @@
 
 
 
-## Step 2: PREREQUISITE: Configure Private Blockchain project here:
+### Step 2: PREREQUISITE: Configure Private Blockchain project here:
 
 - Go to Private Blockchain project [Link](https://github.com/KushalGH/webservices_nodeJS)
 
@@ -35,7 +35,7 @@ $ node
 let blockchain = new Blockchain();
 ```
 
-## Step 3: If PREREQUISITES are met.
+### Step 3: If PREREQUISITES are met.
 
 ```
 $ npm install hapi --save
@@ -51,10 +51,28 @@ $ npm start
 > FYI When you did npm start. It should show this: 
 ![picture](images/001_npmstart.png)
 
-# TESTING: RESTful Web API [HapiJS] with Node.js Framework
+# API END POINTS
+
+### GET Block Endpoint
+- Test tool: FIddler
+- URL: http://localhost:8000/block/{height}
+- End Point: GET Block Endpoint
+- Method: GET
+
+### POST Block Endpoint
+- Test tool: FIddler
+- URL: http://localhost:8000/block
+- End Point: POST Block Endpoint
+- Method: POST
+- FORM DATA: 
+		KEY  : body
+	 	VALUE: {body of the blockchain}
 
 
-## TEST CASE 1: TAKE BLOCK DETAILS OF EXISTING BLOCK
+# TESTING THE APPLICATION: 
+
+
+### TEST CASE 1: TAKE BLOCK DETAILS OF EXISTING BLOCK
 
 ###### INPUT
 - Test tool: FIddler
@@ -76,7 +94,7 @@ $ npm start
 ![picture](images/002_getexistingblock.png)
 
 
-## TEST CASE 2: TAKE BLOCK DETAILS OF A BLOCK THAT DON"T EXIST
+### TEST CASE 2: TAKE BLOCK DETAILS OF A BLOCK THAT DON"T EXIST
 
 ###### INPUT
 - Test tool: FIddler
@@ -95,7 +113,7 @@ $ npm start
 
 
 
-## TEST CASE 3: Add NEW BLOCK 
+### TEST CASE 3: Add NEW BLOCK 
 
 ###### INPUT
 - Test tool: FIddler
@@ -120,7 +138,7 @@ $ npm start
 ```
 ![picture](images/004a_addednewblock.png)
 
-## TEST CASE 4: GET THE BLOCK CREATED IN TESTCASE 3
+### TEST CASE 4: GET THE BLOCK CREATED IN TESTCASE 3
 
 ###### INPUT
 - Test tool: FIddler
@@ -141,7 +159,7 @@ $ npm start
 ```
 ![picture](images/004b_getblockcreatedabove.png)
 
-## TEST CASE 5: Block Contents Validation
+### TEST CASE 5: Block Contents Validation
 
 ###### INPUT
 - Test tool: FIddler
